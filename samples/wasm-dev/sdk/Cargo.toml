@@ -1,0 +1,15 @@
+[package]
+name = "sdk"
+version = "0.1.0"
+authors = ["TinyKube Devs"]
+license = "MIT"
+edition = "2021"
+
+
+[dependencies]
+wit-bindgen = { workspace = true }
+sdk-macros = { path = "macros", version = "0.1.0" }
+sdk-wit = { path = "wit", version = "0.1.0" }
+
+[lints]
+workspace = true

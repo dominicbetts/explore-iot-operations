@@ -1,0 +1,715 @@
+﻿[
+  {
+    "@context": [
+      "dtmi:dtdl:context;4",
+      "dtmi:dtdl:extension:mqtt;2"
+    ],
+    "@id": "dtmi:com:microsoft:azure:tinykube;1",
+    "@type": [ "Interface", "Mqtt" ],
+    "payloadFormat": "Avro/1.11.0",
+    "commandTopic": "tinykube/{executorId}/command/{commandName}",
+    "contents": [
+      {
+        "@type": "Command",
+        "name": "registerApp",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "appClientId",
+                "schema": "string"
+              },
+              {
+                "name": "wasmRuntimeType",
+                "schema": {
+                  "@type": "Enum",
+                  "valueSchema": "string",
+                  "enumValues": [
+                    {
+                      "name": "wamr",
+                      "enumValue": "wamr"
+                    },
+                    {
+                      "name": "wasmtime",
+                      "enumValue": "wasmtime"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "wasmRuntimeVersion",
+                "schema": "string"
+              },
+              {
+                "name": "installType",
+                "schema": {
+                  "@type": "Enum",
+                  "valueSchema": "string",
+                  "enumValues": [
+                    {
+                      "name": "inApp",
+                      "enumValue": "inApp"
+                    },
+                    {
+                      "name": "onHost",
+                      "enumValue": "onHost"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "entityType",
+                "schema": {
+                  "@type": "Enum",
+                  "valueSchema": "string",
+                  "enumValues": [
+                    {
+                      "name": "device",
+                      "enumValue": "device"
+                    },
+                    {
+                      "name": "pod",
+                      "enumValue": "pod"
+                    },
+                    {
+                      "name": "other",
+                      "enumValue": "other"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "statusCode",
+                "schema": "integer"
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              },
+              {
+                "name": "appId",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "unregisterApp",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "appClientId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "statusCode",
+                "schema": "integer"
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "notifyWasmRuntimeUpdate",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmRuntimeId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "statusCode",
+                "schema": "integer"
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "pullWasmRuntime",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmRuntimeId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "downloadId",
+                "schema": "string"
+              },
+              {
+                "name": "runtimeBlob",
+                "schema": "bytes"
+              },
+              {
+                "name": "metadata",
+                "schema": {
+                  "@type": "Object",
+                  "fields": [
+                    {
+                      "name": "size",
+                      "schema": "integer"
+                    },
+                    {
+                      "name": "checksum",
+                      "schema": "string"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "getPullWasmRuntimeStatus",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmRuntimeId",
+                "schema": "string"
+              },
+              {
+                "name": "downloadId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "runtimeUpdateStatus",
+                "schema": {
+                  "@type": "Enum",
+                  "valueSchema": "string",
+                  "enumValues": [
+                    {
+                      "name": "downloading",
+                      "enumValue": "downloading"
+                    },
+                    {
+                      "name": "downloaded",
+                      "enumValue": "downloaded"
+                    },
+                    {
+                      "name": "failed",
+                      "enumValue": "failed"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "registerWasmRuntime",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmRuntimeId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "statusCode",
+                "schema": "integer"
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "notifyModuleUpdate",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmModuleId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "statusCode",
+                "schema": "integer"
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "pullWasmModule",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmModuleId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "downloadId",
+                "schema": "string"
+              },
+              {
+                "name": "moduleBlob",
+                "schema": "bytes"
+              },
+              {
+                "name": "metadata",
+                "schema": {
+                  "@type": "Object",
+                  "fields": [
+                    {
+                      "name": "size",
+                      "schema": "integer"
+                    },
+                    {
+                      "name": "checksum",
+                      "schema": "string"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "getPullModuleStatus",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmModuleId",
+                "schema": "string"
+              },
+              {
+                "name": "downloadId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "moduleUpdateStatus",
+                "schema": {
+                  "@type": "Enum",
+                  "valueSchema": "string",
+                  "enumValues": [
+                    {
+                      "name": "downloading",
+                      "enumValue": "downloading"
+                    },
+                    {
+                      "name": "downloaded",
+                      "enumValue": "downloaded"
+                    },
+                    {
+                      "name": "failed",
+                      "enumValue": "failed"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "subscribeToModuleUpdates",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "appId",
+                "schema": "string"
+              },
+              {
+                "name": "wasmModuleIds",
+                "schema": {
+                    "@type": "Array",
+                    "elementSchema": "string"
+                }
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "statusCode",
+                "schema": "integer"
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "unsubscribeToModuleUpdates",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "appId",
+                "schema": "string"
+              },
+              {
+                "name": "wasmModuleIds",
+                "schema": {
+                    "@type": "Array",
+                    "elementSchema": "string"
+                }
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "statusCode",
+                "schema": "integer"
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "startModule",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmModuleId",
+                "schema": "string"
+              },
+              {
+                "name": "wasmStartConfig",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "statusCode",
+                "schema": "integer"
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "stopModule",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmModuleId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "statusCode",
+                "schema": "integer"
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "getModuleStatus",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmModuleIds",
+                "schema": {
+                    "@type": "Array",
+                    "elementSchema": "string"
+                }
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Array",
+            "elementSchema": {
+              "@type": "Object",
+              "fields": [
+                {
+                  "name": "wasmModuleId",
+                  "schema": "string"
+                },
+                {
+                  "name": "wasmModuleStatus",
+                  "schema": {
+                    "@type": "Enum",
+                    "valueSchema": "string",
+                    "enumValues": [
+                      {
+                        "name": "running",
+                        "enumValue": "running"
+                      },
+                      {
+                        "name": "stopped",
+                        "enumValue": "stopped"
+                      },
+                      {
+                        "name": "noexist",
+                        "enumValue": "noexist"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "startTime",
+                  "schema": "string"
+                },
+                {
+                  "name": "timeSinceStart",
+                  "schema": "string"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "deleteModule",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmModuleId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "statusCode",
+                "schema": "integer"
+              },
+              {
+                "name": "description",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "queryModule",
+        "request": {
+          "name": "reqParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "wasmModuleId",
+                "schema": "string"
+              }
+            ]
+          }
+        },
+        "response": {
+          "name": "rspParams",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              {
+                "name": "exist",
+                "schema": "boolean"
+              },
+              {
+                "name": "availableVersions",
+                "schema": {
+                  "@type": "Array",
+                  "elementSchema": "string"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[package]
+name = "sdk-macros"
+version = "0.1.0"
+authors = ["TinyKube Devs"]
+license = "MIT"
+edition = "2021"
+
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { workspace = true }
+proc-macro2 = { workspace = true }
+quote = { workspace = true }
+sdk-wit = { path = "../wit", version = "0.1.0" }
+
+[dev-dependencies]
+wit-bindgen = { workspace = true }
+
+[lints]
+workspace = true

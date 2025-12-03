@@ -1,0 +1,83 @@
+package tinykube-graph:processor@1.0.0;
+
+interface types {
+	use hybrid-logical-clock.{timespec};
+
+	// A handle to a byter buffer held by the WASM host.
+	resource buffer {
+		// Read the bytes of this buffer into the module memory.
+		read: func() -> list<u8>;
+	}
+
+	// A value that is either a host buffer handle or a module buffer.
+	variant buffer-or-bytes {
+		buffer(buffer),
+		bytes(list<u8>),
+	}
+
+	// A value that is either a host buffer handle or a module string.
+	variant buffer-or-string {
+		buffer(buffer),
+		%string(string),
+	}
+
+	// A hybrid logical clock for DataModel timestamp
+	record timestamp {
+		timestamp: timespec,
+		counter: u64,
+		node-id: buffer-or-string,
+	}
+
+	// A MQTT message
+	record mqtt-message {
+		timestamp: timestamp,
+		topic: buffer-or-bytes,
+		payload: buffer-or-bytes,
+	}
+
+	// A Snapshot
+	record snapshot {
+		timestamp: timestamp,
+		format: buffer-or-string,
+		width: u32,
+		height: u32,
+		frame: buffer-or-bytes,
+	}
+
+	// TODO: Add fusion record and fusion context support
+	// use fusion-types.{fusion-record, fusion-context};
+	// FUSION record
+	// record fusion-record-model {
+	// 	timestamp: timestamp;
+	// 	%record: fusion-record;
+	// }
+
+	// FUSION context information
+	// record fusion-context-model {
+	// 	timestamp: timestamp,
+	// 	topics: list<string>,
+	// 	context: fusion-context,
+	// }
+
+	// DataModel
+	variant data-model {
+		buffer-or-bytes(buffer-or-bytes),
+		mqtt-message(mqtt-message),
+		snapshot(snapshot),
+		// fusion-record(fusion-record-model),
+		// fusion-context(fusion-context-model),
+	}
+}
+
+world host {
+	use types.{data-model};
+
+	import hybrid-logical-clock;
+	import state-store;
+	import logger;
+	import metrics;
+}
+
+world test {
+	// import no interface so in test we can mock it
+}

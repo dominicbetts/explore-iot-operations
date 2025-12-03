@@ -1,0 +1,27 @@
+moduleConfigurations:
+  - name: module-otel-enrich/map
+    parameters:
+      enrichKeys:
+        name: enrichKeys
+        description: Comma separated list of DSS keys which will be fetched and added as attributes
+        default: factoryId,machineId
+moduleRequirements:
+  apiVersion: "0.2.0"
+  hostlibVersion: "0.2.0"
+operations:
+  - operationType: "source"
+    name: "source"
+  - operationType: "map"
+    name: "module-otel-enrich/map"
+    module: "otel-enrich"
+  - operationType: "sink"
+    name: "sink"
+connections:
+  - from:
+      name: "source"
+    to:
+      name: "module-otel-enrich/map"
+  - from:
+      name: "module-otel-enrich/map"
+    to:
+      name: "sink"

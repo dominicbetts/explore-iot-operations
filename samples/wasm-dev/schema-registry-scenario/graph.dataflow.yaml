@@ -1,0 +1,20 @@
+moduleRequirements:
+    apiVersion: "0.2.0"
+    hostlibVersion: "0.2.0"
+operations:
+  - operationType: source
+    name: source
+  - operationType: filter
+    name: filter
+    module: filter
+  - operationType: sink
+    name: sink
+connections:
+  - from:
+      name: source
+    to:
+      name: filter
+  - from:
+      name: filter
+    to:
+      name: sink

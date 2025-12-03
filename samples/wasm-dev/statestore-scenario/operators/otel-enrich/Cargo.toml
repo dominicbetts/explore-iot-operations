@@ -1,0 +1,16 @@
+[package]
+name = "otel-enrich"
+version = "0.0.1"
+authors = ["TinyKube Devs"]
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+wit-bindgen = "0.22"
+tinykube_wasm_sdk = { version = "=0.2.0-20250813-sdk-update2-a31ab25", registry="azure-vscode-tinykube" }
+serde = { version = "1.0", features = ["derive"] } 
+serde_json = "1.0" 
+
+[lib]
+crate-type = ["cdylib"]
+path = "src/lib.rs"
