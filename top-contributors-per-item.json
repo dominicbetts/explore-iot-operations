@@ -1,0 +1,114 @@
+[
+  {"item":"docker","last_modified_utc":"2025-10-28T11:04:43-07:00","top_contributors":[{"rank":1,"commits":2,"name":"Ethan","email":"ethan@ethansstress.guest.corp.microsoft.com"},{"rank":2,"commits":1,"name":"John Lian","email":"jlian@users.noreply.github.com"},{"rank":3,"commits":1,"name":"Dane Walton","email":"dawalton@microsoft.com"}]}
+,
+  {"item":"docs","last_modified_utc":"2023-11-15T11:26:17-08:00","top_contributors":[{"rank":1,"commits":4,"name":"Ethan","email":"ethan@ethansstress.guest.corp.microsoft.com"},{"rank":2,"commits":2,"name":"ethanperry1","email":"107274017+ethanperry1@users.noreply.github.com"}]}
+,
+  {"item":"lib/env","last_modified_utc":"2023-11-08T18:13:43-08:00","top_contributors":[{"rank":1,"commits":1,"name":"Ethan","email":"ethan@ethansstress.guest.corp.microsoft.com"}]}
+,
+  {"item":"lib/logger","last_modified_utc":"2023-11-08T18:13:43-08:00","top_contributors":[{"rank":1,"commits":1,"name":"Ethan","email":"ethan@ethansstress.guest.corp.microsoft.com"}]}
+,
+  {"item":"lib/mage","last_modified_utc":"2023-12-21T13:54:59-08:00","top_contributors":[{"rank":1,"commits":2,"name":"Ethan","email":"ethan@ethansstress.guest.corp.microsoft.com"},{"rank":2,"commits":1,"name":"ethanperry1","email":"107274017+ethanperry1@users.noreply.github.com"}]}
+,
+  {"item":"lib/proto","last_modified_utc":"2023-11-17T14:22:42-08:00","top_contributors":[{"rank":1,"commits":2,"name":"Ethan","email":"ethan@ethansstress.guest.corp.microsoft.com"},{"rank":2,"commits":1,"name":"ethanperry1","email":"107274017+ethanperry1@users.noreply.github.com"}]}
+,
+  {"item":"samples/aio-onvif-connector-ptz-demo","last_modified_utc":"2025-11-11T16:40:33Z","top_contributors":[{"rank":1,"commits":5,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/akri-vscode-extension","last_modified_utc":"2025-12-08T11:19:05-08:00","top_contributors":[{"rank":1,"commits":2,"name":"Nagaraju Machavarapu","email":"machavarapun@microsoft.com"}]}
+,
+  {"item":"samples/anomaly-detection","last_modified_utc":"2024-01-19T09:36:22-08:00","top_contributors":[{"rank":1,"commits":8,"name":"ethanperry1","email":"107274017+ethanperry1@users.noreply.github.com"}]}
+,
+  {"item":"samples/auth-server-template","last_modified_utc":"2025-02-19T15:04:04-08:00","top_contributors":[{"rank":1,"commits":7,"name":"davidE","email":"116028030+david-emakenemi@users.noreply.github.com"},{"rank":2,"commits":3,"name":"John Lian","email":"jlian@users.noreply.github.com"},{"rank":3,"commits":3,"name":"Gordon Wang","email":"36049150+gordonwang0@users.noreply.github.com"}]}
+,
+  {"item":"samples/auth-server-user-pass-mqtt","last_modified_utc":"2025-02-28T10:31:11-08:00","top_contributors":[{"rank":1,"commits":1,"name":"Suneet Nangia","email":"sunangi@microsoft.com"}]}
+,
+  {"item":"samples/custom-connector-bicep","last_modified_utc":"2026-01-14T12:12:25Z","top_contributors":[{"rank":1,"commits":1,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/custom-rbac","last_modified_utc":"2025-11-24T17:30:31Z","top_contributors":[{"rank":1,"commits":4,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/dapr-quickstart-go","last_modified_utc":"2024-08-06T12:02:13-07:00","top_contributors":[{"rank":1,"commits":5,"name":"Ryan Winter","email":"ryanwinter@outlook.com"},{"rank":2,"commits":2,"name":"dependabot[bot]","email":"49699333+dependabot[bot]@users.noreply.github.com"},{"rank":3,"commits":1,"name":"Ethan","email":"ethan@ethansstress.guest.corp.microsoft.com"}]}
+,
+  {"item":"samples/dapr-service-bus","last_modified_utc":"2024-08-06T12:02:13-07:00","top_contributors":[{"rank":1,"commits":11,"name":"Ryan Winter","email":"ryanwinter@outlook.com"}]}
+,
+  {"item":"samples/dapr-service-bus-dotnet","last_modified_utc":"2024-08-06T12:02:13-07:00","top_contributors":[{"rank":1,"commits":2,"name":"Ryan Winter","email":"ryanwinter@outlook.com"}]}
+,
+  {"item":"samples/dapr-workflow","last_modified_utc":"2024-08-06T12:02:13-07:00","top_contributors":[{"rank":1,"commits":2,"name":"Ryan Winter","email":"ryanwinter@outlook.com"}]}
+,
+  {"item":"samples/dashboard","last_modified_utc":"2024-11-05T11:01:08-08:00","top_contributors":[{"rank":1,"commits":6,"name":"Bailey Anderson","email":"baanders@microsoft.com"},{"rank":2,"commits":1,"name":"Udbhav Trivedi","email":"94557717+UdTri@users.noreply.github.com"},{"rank":3,"commits":1,"name":"Udbhav Trivedi","email":"94557717+udtri@users.noreply.github.com"},{"rank":4,"commits":1,"name":"Ethan","email":"ethan@ethansstress.guest.corp.microsoft.com"}]}
+,
+  {"item":"samples/dss_set","last_modified_utc":"2024-08-05T18:20:55-07:00","top_contributors":[{"rank":1,"commits":3,"name":"Udbhav Trivedi","email":"94557717+udtri@users.noreply.github.com"},{"rank":2,"commits":1,"name":"vipeller","email":"51135538+vipeller@users.noreply.github.com"}]}
+,
+  {"item":"samples/http-grpc-shift-calculation","last_modified_utc":"2024-01-16T10:51:11-08:00","top_contributors":[{"rank":1,"commits":5,"name":"ethanperry1","email":"107274017+ethanperry1@users.noreply.github.com"}]}
+,
+  {"item":"samples/http-sql-connector-app-dotnet","last_modified_utc":"2024-09-18T11:18:19-07:00","top_contributors":[{"rank":1,"commits":1,"name":"olivakar","email":"oliva.tanusree@gmail.com"}]}
+,
+  {"item":"samples/industrial-data-simulator","last_modified_utc":"2024-02-28T14:43:21-08:00","top_contributors":[{"rank":1,"commits":8,"name":"ethanperry1","email":"107274017+ethanperry1@users.noreply.github.com"},{"rank":2,"commits":1,"name":"Maho Pacheco","email":"mictlan@gmail.com"}]}
+,
+  {"item":"samples/layered-networking","last_modified_utc":"2025-07-09T06:26:18+01:00","top_contributors":[{"rank":1,"commits":1,"name":"Pat Altimore","email":"17440249+PatAltimore@users.noreply.github.com"},{"rank":2,"commits":1,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/media-connector-bicep","last_modified_utc":"2025-02-27T12:18:57Z","top_contributors":[{"rank":1,"commits":2,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/media-server","last_modified_utc":"2025-04-29T17:57:19+01:00","top_contributors":[{"rank":1,"commits":1,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/mqtt-client-dotnet","last_modified_utc":"2024-08-12T18:41:35Z","top_contributors":[{"rank":1,"commits":7,"name":"Ryan Winter","email":"ryanwinter@outlook.com"}]}
+,
+  {"item":"samples/onvif-connector-bicep","last_modified_utc":"2025-04-24T13:52:29+01:00","top_contributors":[{"rank":1,"commits":3,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/process-control","last_modified_utc":"2025-09-30T14:56:44+01:00","top_contributors":[{"rank":1,"commits":1,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts","last_modified_utc":"2025-11-06T11:46:34Z","top_contributors":[{"rank":1,"commits":23,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"},{"rank":2,"commits":19,"name":"davidE","email":"116028030+david-emakenemi@users.noreply.github.com"},{"rank":3,"commits":2,"name":"Venkat Yalla","email":"veyalla@microsoft.com"},{"rank":4,"commits":1,"name":"Robert Jang","email":"robbaldwin95@gmail.com"},{"rank":5,"commits":1,"name":"Meena Gudapati","email":"104656823+meenag16@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/adls-df.bicep","last_modified_utc":"2024-10-15T13:23:40-07:00","top_contributors":[{"rank":1,"commits":1,"name":"davidE","email":"116028030+david-emakenemi@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/adx-df.bicep","last_modified_utc":"2024-10-15T13:23:12-07:00","top_contributors":[{"rank":1,"commits":1,"name":"davidE","email":"116028030+david-emakenemi@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/akri-opcua-asset.yaml","last_modified_utc":"2023-11-22T11:16:29Z","top_contributors":[{"rank":1,"commits":2,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/az-mqtt-non-tls-listener.yaml","last_modified_utc":"2024-08-06T11:14:00-07:00","top_contributors":[{"rank":1,"commits":2,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"},{"rank":2,"commits":1,"name":"Venkat Yalla","email":"veyalla@microsoft.com"}]}
+,
+  {"item":"samples/quickstarts/dataflow.bicep","last_modified_utc":"2024-10-11T10:11:34-07:00","top_contributors":[{"rank":1,"commits":5,"name":"davidE","email":"116028030+david-emakenemi@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/dataflow.yaml","last_modified_utc":"2024-10-03T09:49:27+01:00","top_contributors":[{"rank":1,"commits":4,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/dataflow-loopback.yaml","last_modified_utc":"2024-10-03T09:49:27+01:00","top_contributors":[{"rank":1,"commits":1,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/datalake-connector.yaml","last_modified_utc":"2024-05-01T10:34:38+01:00","top_contributors":[{"rank":1,"commits":3,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/event-hubs-config.bicep","last_modified_utc":"2024-07-30T18:18:27+01:00","top_contributors":[{"rank":1,"commits":1,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/fabric-onelake-df.bicep","last_modified_utc":"2024-10-15T13:33:09-07:00","top_contributors":[{"rank":1,"commits":2,"name":"davidE","email":"116028030+david-emakenemi@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/kafka-df.bicep","last_modified_utc":"2024-10-15T13:34:37-07:00","top_contributors":[{"rank":1,"commits":2,"name":"davidE","email":"116028030+david-emakenemi@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/localStorage-df.bicep","last_modified_utc":"2024-10-15T13:35:44-07:00","top_contributors":[{"rank":1,"commits":2,"name":"davidE","email":"116028030+david-emakenemi@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/mqtt-bridge.bicep","last_modified_utc":"2024-10-15T13:30:26-07:00","top_contributors":[{"rank":1,"commits":3,"name":"davidE","email":"116028030+david-emakenemi@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/mqtt-client.yaml","last_modified_utc":"2024-11-18T11:05:01-08:00","top_contributors":[{"rank":1,"commits":2,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"},{"rank":2,"commits":1,"name":"Robert Jang","email":"robbaldwin95@gmail.com"},{"rank":3,"commits":1,"name":"Marcel Bindseil","email":"marcelbindseil@gmail.com"}]}
+,
+  {"item":"samples/quickstarts/opc-plc-deployment.yaml","last_modified_utc":"2025-09-15T17:03:30+01:00","top_contributors":[{"rank":1,"commits":5,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/opc-plc-tutorial-deployment.yaml","last_modified_utc":"2025-09-15T17:03:30+01:00","top_contributors":[{"rank":1,"commits":4,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/opc-ua-connector-0.yaml","last_modified_utc":"2023-11-17T15:11:55Z","top_contributors":[{"rank":1,"commits":2,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/quickstarts/quickstart.bicep","last_modified_utc":"2025-11-06T11:46:34Z","top_contributors":[{"rank":1,"commits":9,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"},{"rank":2,"commits":1,"name":"Venkat Yalla","email":"veyalla@microsoft.com"},{"rank":3,"commits":1,"name":"Meena Gudapati","email":"104656823+meenag16@users.noreply.github.com"},{"rank":4,"commits":1,"name":"Alexander Köpke","email":"koepalex@xdigital.de"}]}
+,
+  {"item":"samples/shared-multimedia","last_modified_utc":"2024-11-12T10:47:06Z","top_contributors":[{"rank":1,"commits":1,"name":"Sam Chang","email":"samecchang@users.noreply.github.com"}]}
+,
+  {"item":"samples/tanzu-config","last_modified_utc":"2025-06-11T15:47:48+01:00","top_contributors":[{"rank":1,"commits":1,"name":"Dominic Betts","email":"1454644+dominicbetts@users.noreply.github.com"}]}
+,
+  {"item":"samples/wasm","last_modified_utc":"2025-12-11T14:09:48-08:00","top_contributors":[{"rank":1,"commits":4,"name":"Dane Walton","email":"dawalton@microsoft.com"},{"rank":2,"commits":2,"name":"John Lian","email":"jlian@users.noreply.github.com"},{"rank":3,"commits":2,"name":"John Lian","email":"jlian@microsoft.com"},{"rank":4,"commits":2,"name":"Anca Antochi","email":"Anca.antochi@gmail.com"},{"rank":5,"commits":1,"name":"Zhen Kong","email":"zkongcn@gmail.com"}]}
+,
+  {"item":"samples/wasm-python","last_modified_utc":"2025-12-08T12:12:22-08:00","top_contributors":[{"rank":1,"commits":1,"name":"John Lian","email":"jlian@users.noreply.github.com"}]}
+,
+  {"item":"schema-gen-helper","last_modified_utc":"2024-11-18T20:07:46Z","top_contributors":[{"rank":1,"commits":1,"name":"John Lian","email":"jlian@users.noreply.github.com"}]}
+,
+  {"item":"scripts/arcConnect.sh","last_modified_utc":"2024-07-23T17:19:30-07:00","top_contributors":[{"rank":1,"commits":2,"name":"Venkat Yalla","email":"veyalla@microsoft.com"},{"rank":2,"commits":1,"name":"Ethan","email":"ethan@ethansstress.guest.corp.microsoft.com"}]}
+,
+  {"item":"scripts/iotopsQuickstart.sh","last_modified_utc":"2024-12-18T13:54:25-08:00","top_contributors":[{"rank":1,"commits":1,"name":"Venkat Yalla","email":"veyalla@microsoft.com"}]}
+,
+  {"item":"tools/statestore-cli","last_modified_utc":"2024-11-19T16:05:35-08:00","top_contributors":[{"rank":1,"commits":1,"name":"Ryan Winter","email":"ryanwinter@outlook.com"},{"rank":2,"commits":1,"name":"Ewerton Scaboro da Silva","email":"ewertons@microsoft.com"}]}
+,
+  {"item":"tutorials/mq-event-driven-dapr","last_modified_utc":"2024-11-11T20:50:50Z","top_contributors":[{"rank":1,"commits":19,"name":"Ryan Winter","email":"ryanwinter@outlook.com"}]}
+
+]
